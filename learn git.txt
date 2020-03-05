@@ -24,9 +24,14 @@ $ ssh -T git@github.com（如果成功，在/.ssh目录下会有know_hosts文件）
 6 git push -u origin master //把本地仓库的文件推送到远程仓库
 
 
-
 克隆远程仓库
 git clone git@github.com:iwtrtw/about_cs.git
+
+
+本地-->远程
+git add (移到暂存区)
+git commit -m "提交到本地仓库"
+git push origin master
 
 
 
