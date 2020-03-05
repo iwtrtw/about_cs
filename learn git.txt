@@ -1,0 +1,35 @@
+初始化账户（用户名、邮箱）
+1 git config --global user.name "xxx"
+2 git config --global user.email "xxxx@xxx"
+
+查看账户信息 C:/user/li/.gitconfig
+
+
+配置免秘钥连接（ssh）
+$ ssh-keygen -t rsa -C xxxx@xxx
+公钥 C:/user/li/.ssh/id_rsa.pub
+私钥 C:/user/li/.ssh/id_rsa
+
+测试ssh是否配置成功(远程仓库为github)
+$ ssh -T git@github.com（如果成功，在/.ssh目录下会有know_hosts文件）
+
+
+本地仓库连接远程仓库
+1 git init (初始化本地仓库)
+2 git add .(文件name) //添加文件到本地仓库
+3 git commit -m “first commit” //添加文件描述信息
+4 git remote add origin + 远程仓库地址 //链接远程仓库，创建主分支
+5 git pull origin master --allow-unrelated-histories（本地仓库和远程仓库实际上是独立的两个仓库）
+   git pull origin master // 把本地仓库的变化连接到远程仓库主分支（本地仓库原本是从远程仓库clone的）
+6 git push -u origin master //把本地仓库的文件推送到远程仓库
+
+
+
+克隆远程仓库
+git clone git@github.com:iwtrtw/about_cs.git
+
+
+
+
+
+
