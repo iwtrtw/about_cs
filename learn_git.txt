@@ -66,5 +66,50 @@ git config  --system(当前用户)
 撤销对对象区的文件修改(工作区->对象区)
 git restore xxx.txt
 
-撤销add(暂存区移回工作区)
+撤销add(暂存区-->工作区)
 git restore --staged xxx.txt
+
+
+删除文件(命令删除)
+git rm  xxx.txt (xxx.txt文件会放在暂存区)
+commit 之后会被彻底删除
+
+(右键删除shift+delete)，会先放在工作区
+
+
+重写注释
+git commit --amend -m "该注释已被提交" (修改最近的一次提交)
+
+
+设置忽略文件（默认忽略空目录）
+touch .gitignore
+vi .gitignore ---->
+*.properties （）
+!b.properties (不忽略b)
+testmkdir/：（全部忽略）
+
+
+
+查看分支
+git branch
+
+创建新分支
+git branch 分支名
+
+切换分支
+git checkout 分支名
+
+创建并切换到新分支
+git checkout -b 分支名
+
+合并分支到master(但会将已删除的操作一起合并，master的内容会被删掉)
+git merge 分支名
+
+删除分支(先切换到其他分支)，若分支还没有合并到master建议先合并
+git branch -d 分支名
+
+强行删除分支
+git branch -D 分支名
+
+在工作区的文件，master可以看到其他分支的文件
+
