@@ -78,7 +78,7 @@ commit 之后会被彻底删除
 
 
 重写注释
-git commit --amend -m "该注释已被提交" (修改最近的一次提交)
+git commit --amend -m "该注释已被提交" (修改最近的一次提交的注释)
 
 
 设置忽略文件（默认忽略空目录）
@@ -102,8 +102,16 @@ git checkout 分支名
 创建并切换到新分支
 git checkout -b 分支名
 
-合并分支到master(但会将已删除的操作一起合并，master的内容会被删掉)
+
+图形化查看日志
+git log -graph
+
+合并分支到master(但会将已删除的操作一起合并，master的内容会被删掉)（默认合并方式为fast-forward 但日志会丢失分支信息）
 git merge 分支名
+
+不使用fast-forward合并
+git merge --no-ff 分支名
+
 
 删除分支(先切换到其他分支)，若分支还没有合并到master建议先合并
 git branch -d 分支名
@@ -112,4 +120,24 @@ git branch -d 分支名
 git branch -D 分支名
 
 在工作区的文件，master可以看到其他分支的文件
+
+
+解决冲突，修改文件冲突位置后add再commit      git add xxx.txt 再commit 
+
+
+合并add 、commit 
+git commit -am "先add后commit"
+
+版本回退上一步（一步一个^，n步n个^）
+git reset --hard HEAD^
+或者直接加数字（前n步）
+git reset --hard HEAD~n
+
+通过shark值直接跳跃（前进或后退）
+git reset --hard shark值得前几位
+
+查看版本穿梭的记录
+git reflog
+
+
 
