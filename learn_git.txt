@@ -140,4 +140,7 @@ git reset --hard shark值得前几位
 git reflog
 
 
+重命名分支
+git branch -m master master2
+
 
