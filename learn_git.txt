@@ -62,3 +62,9 @@ Ctrl+E：光标移到尾
 
 git config  --local(当前项目一次性设置)
 git config  --system(当前用户)
+
+撤销对对象区的文件修改(工作区->对象区)
+git restore xxx.txt
+
+撤销add(暂存区移回工作区)
+git restore --staged xxx.txt
