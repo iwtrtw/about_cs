@@ -52,8 +52,13 @@ $rm -rf .git
 查看git当前状态
 git status
 
+查看日志
+git log
+git log -2（显示最近2次）
+git log --pretty=oneline(单行显示记录：id+message)
 
+Ctrl+A：光标移到首
+Ctrl+E：光标移到尾
 
-
-
-
+git config  --local(当前项目一次性设置)
+git config  --system(当前用户)
